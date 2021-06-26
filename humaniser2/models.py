@@ -16,6 +16,3 @@ class Person(Model):
         return person_label
 
 
-from django.db import models
-
-# Create your models here.

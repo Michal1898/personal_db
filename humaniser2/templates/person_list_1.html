@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome to Personal DB!</h1>
+  <ul>
+    {% for human in people %}
+      <li>
+        {{human}}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome to Personal DB! - List View</h1>
+  <ul>
+    {% for human in object_list %}
+      <li>
+        {{human.firstname}} {{human.surname}} narozen {{human.birthdate}}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

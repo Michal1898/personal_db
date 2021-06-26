@@ -16,13 +16,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from humaniser2.views import hello
+from humaniser2.views import hello, PeopleView, PeopleListView
 from humaniser2.views import stranger
 
+from humaniser2.models import Person
+
+#admin.site.register(Person)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', stranger),
     path('hello/<s>', hello),
-    path('stranger', stranger)
+    path('stranger', stranger),
+    path('list1/', PeopleView.as_view(), name='people_list1'),
+    path('list2/', PeopleListView.as_view(), name='people_list2')
 ]
