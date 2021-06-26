@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 from humaniser2.views import hello
+from humaniser2.views import stranger
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/<s>', hello)
+    path('hello/<s>', hello),
+    path('stranger', stranger)
 ]
