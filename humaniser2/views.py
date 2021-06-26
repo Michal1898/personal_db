@@ -27,7 +27,7 @@ def stranger(request):
 class PeopleView(View):
   def get(self, request):
     Person.objects.all().delete()
-    n=random_person(False,18, 60, 10)
+    n=random_person(True,18, 60, 10)
     #print(n)
     # n=requests.get('https://humaniser2.herokuapp.com/?sex=female&count=10')
     #n=n.json()
@@ -43,8 +43,8 @@ class PeopleView(View):
 
       city = m.get("city")
       street = m.get("street")
-      if street =="":
-        street = city
+      # if street =="":
+      #   street = city
       house_no = m.get("house_no")
       plz = m.get("plz")
       print(firstname, surname, gender, birth_day, birth_month, birth_year, city, street, house_no, plz)

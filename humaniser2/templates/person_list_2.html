@@ -5,8 +5,14 @@
   <ul>
     {% for human in object_list %}
       <li>
-        {{human.firstname}} {{human.surname}} narozen: {{human.birth_day}}.{{human.birth_month}}.{{human.birth_year}}
-        from {{human.city}}
+        {{human.firstname}} {{human.surname}} :
+        {% if human.gender %}
+        Žena, narozená
+        {% else %}
+        Muž, narozen
+        {% endif %}
+        {{human.birth_day}}.{{human.birth_month}}.{{human.birth_year}}
+        , from {{human.city}}
       </li>
     {% endfor %}
   </ul>
