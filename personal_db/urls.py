@@ -22,6 +22,7 @@ from humaniser2.views import stranger
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', stranger),
     path('hello/<s>', hello),
     path('stranger', stranger)
 ]
