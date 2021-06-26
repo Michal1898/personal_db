@@ -48,7 +48,7 @@ class PeopleView(View):
         firstname = firstname,
         surname = surname,
         gender = gender,
-        birthdate = datetime.date.today,
+        birthdate = datetime.date.today(),
         city = city,
         street = street,
         house_no = house_no,
