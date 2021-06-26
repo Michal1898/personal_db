@@ -25,7 +25,7 @@ admin.site.register(Person)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', stranger),
+    path('', PeopleView.as_view(), name='people_list1'),
     path('hello/<s>', hello),
     path('stranger', stranger),
     path('list1/', PeopleView.as_view(), name='people_list1'),
