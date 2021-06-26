@@ -21,7 +21,7 @@ from humaniser2.views import stranger
 
 from humaniser2.models import Person
 
-#admin.site.register(Person)
+admin.site.register(Person)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
